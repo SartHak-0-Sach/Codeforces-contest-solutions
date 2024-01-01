@@ -25,7 +25,6 @@ void solve() {
     }
     
     cout << "NO" << endl;
-    
 }
 
 int main() {
@@ -33,8 +32,8 @@ int main() {
     cin >> t;
     
     for(int tc = 1; tc <= t; tc++) {
-        solve ();
+        solve();
     }
-    
+
     return 0;
 }
