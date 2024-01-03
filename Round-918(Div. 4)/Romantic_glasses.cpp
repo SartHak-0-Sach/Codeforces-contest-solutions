@@ -25,15 +25,17 @@ void solve() {
     }
     
     cout << "NO" << endl;
+    
 }
 
 int main() {
+    
     int t = 1;
     cin >> t;
     
     for(int tc = 1; tc <= t; tc++) {
-        solve();
+        solve ();
     }
-
+    
     return 0;
 }
