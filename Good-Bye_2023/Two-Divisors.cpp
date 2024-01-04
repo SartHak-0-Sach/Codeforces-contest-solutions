@@ -1,20 +1,29 @@
-#include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
+#include <numeric>
 using namespace std;
 
-int main(int argc, char const *argv[])
+using ll = int64_t;
+void solve()
 {
-    int t;
-    cin >> t;
-    while (t--)
+    ll A, B;
+    cin >> A >> B;
+    if (B % A == 0)
     {
-        int a, b;
-        cin >> a >> b;
-        if (b % a == 0)
-        {
-            cout << b * (b / a) << endl;
-        }
-        else
-            cout << b * (a / __gcd(a, b)) << endl;
+        ll ans = B * (B / A);
+        cout << ans << '\n';
     }
+    else
+    {
+        ll ans = B * (A / __gcd(A, B));
+        cout << ans << '\n';
+    }
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false), cin.tie(nullptr);
+    int T;
+    cin >> T;
+    while (T--)
+        solve();
 }

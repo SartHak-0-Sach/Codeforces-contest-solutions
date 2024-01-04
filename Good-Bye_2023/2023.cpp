@@ -1,35 +1,45 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(int argc, char const *argv[])
+void solve()
 {
-    int t;
-    cin >> t;
-    while (t--)
+    int N, K;
+    cin >> N >> K;
+    int A = 2023;
+    for (int i = 0; i < N; i++)
     {
-        int n;
-        cin >> n;
-        int k;
-        cin >> k;
-        int b[n];
-        long long product = 1;
-        for (int i = 0; i < n; i++)
+        int b;
+        cin >> b;
+        if (A % b == 0)
         {
-            cin >> b[i];
-            product *= b[i];
+            A /= b;
         }
-        if (2023 % product == 0)
-        {
-            cout << "YES" << endl;
-            for (int i = 0; i < k - 1; i++)
-            {
-                cout << "1 ";
-            }
-            cout << 2023 / product << endl;
-        }
-
         else
-            cout << "NO" << endl;
+        {
+            A = 0;
+        }
     }
-    return 0;
+    if (A)
+    {
+        cout << "YES" << '\n';
+        cout << A;
+        for (int i = 1; i < K; i++)
+        {
+            cout << " 1";
+        }
+        cout << '\n';
+    }
+    else
+    {
+        cout << "NO" << '\n';
+    }
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false), cin.tie(nullptr);
+    int T;
+    cin >> T;
+    while (T--)
+        solve();
 }

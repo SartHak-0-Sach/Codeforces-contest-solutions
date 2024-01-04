@@ -1,45 +1,27 @@
-#include <iostream>
-#include <vector>
-#include <cmath>
+#include <bits/stdc++.h>
 using namespace std;
 
-void final(vector<int> a, int b, int c)
-{
-    vector<int> temp = a;
+using ll = int64_t;
+void solve(){
+	int N;
+	cin >> N;
+	vector<ll> A(N);
+	for(ll& x : A) cin >> x;
+	ll sum = 0;
+	vector<int> freq(2);
+	for(int i = 0; i < N; i++){
+		sum += (A[i] / 2) * 2;
+		freq[A[i] % 2]++;
+		int v = (freq[1] + 1) / 3;
+		ll ans = sum + v * 2;
+		if(i == 0 && freq[1]) ans++;
+		cout << (ans) << " \n"[i+1 == N];
+	}
 }
 
-int main(int argc, char const *argv[])
-{
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        int n;
-        cin >> n;
-        vector<int> a(n);
-
-        if (n == 1)
-        {
-            cout << a[0] << endl;
-        }
-
-        for (int i = 0; i < n; i++)
-        {
-            cin >> a[i];
-        }
-
-        vector<int> ans;
-        ans[0] = a[0];
-        ans[1] = floor((a[0] + a[1]) / 2) * 2;
-
-        for(int i = 2; i < n; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                
-            }
-            
-        }
-    }
-    return 0;
+int main(){
+	ios_base::sync_with_stdio(false), cin.tie(nullptr);
+	int T;
+	cin >> T;
+	while(T--) solve();
 }
