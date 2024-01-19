@@ -22,8 +22,6 @@ int main()
     return 0;
 }
 
-
-
 // #include <bits/stdc++.h>
 
 // #define itn int
