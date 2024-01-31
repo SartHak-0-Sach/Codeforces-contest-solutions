@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "c:/Users/saksh/OneDrive/Desktop/github/Coding-Ninjas-DSA-solutions-cpp/Milestone-1/Lec-7",
+      "program": "c:/Users/saksh/OneDrive/Desktop/github/Coding-Ninjas-DSA-solutions-cpp/Milestone-1/Lec-7/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
